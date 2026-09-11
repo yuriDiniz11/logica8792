@@ -12,13 +12,13 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n;
+    int idade;
 
-    printf("Digite um número: ");
-    scanf("%d", &n);
+    printf("Digite a idade: ");
+    scanf("%d", &idade);
 
-    printf("Antecessor: %d\n", n - 1);
-    printf("Sucessor: %d\n", n + 1);
+    printf("Equivale a %d meses\n", idade * 12);
+    printf("Equivale a %d dias (aproximado)\n", idade * 365);
     
     return 0;
 }
