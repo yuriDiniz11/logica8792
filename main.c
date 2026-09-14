@@ -12,16 +12,7 @@ int main(){
    printf("Digite um número: ");
    scanf("%d", &n);
 
-
-
-   if(n > 0){
-        printf("Positivo\n");
-    }else if(n < 0){
-        printf("Negativo\n");
-    }else{
-        printf("Igual 0");
-    }
-    
+    printf("%s", n > 0 ? "Positivo" : (n < 0 ? "Negativo" : "Zero"));    
 
     return 0;
 }
