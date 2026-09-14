@@ -13,7 +13,11 @@ int main(){
    scanf("%d", &n);
 
 
-    printf("%s", n % 2 == 0 ? "\nPar" : "\nImpar");
+   if(n % 2 == 0){
+        printf("\nPar");
+    }else{
+        printf("\nImpar");
+    }
 
     return 0;
 }
