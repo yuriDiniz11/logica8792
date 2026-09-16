@@ -7,22 +7,30 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   int idade;
-   float altura;
+   int n1, n2, n3;
+   float media;
+   float freq;
 
-   printf("Bem-vindos ao brinquedo roleta da morte!");
-   printf("\nQual sua idade?");
-   scanf("%d", &idade);
-   printf("\nQual sua altura?");
-   scanf("%f", &altura);
+   printf("Digite a nota 1: ");
+   scanf("%d", &n1);
 
-   if((idade >= 18) || (altura >= 1.60)){
-    printf("Você pode brincar na roleta!");
-   }else{
-    printf("Você não pode brincar na roleta!");
+   printf("Digite a nota 2: ");
+   scanf("%d", &n2);
+
+   printf("Digite a nota 3: ");
+   scanf("%d", &n3);
+
+   media = ( n1 + n2 + n3) / 3;
+
+    printf("Digite a frequência (em números apenas): ");
+    scanf("%f", &freq);
+
+    if(media >= 7 && freq >= 75){
+        printf("\nAprovado com sucesso!");
+    }else{
+        printf("\nReprovado!");
     }
 
     return 0;
 }
 
-//testeeeee     
