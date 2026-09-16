@@ -9,25 +9,34 @@ int main(){
 
    int diaDaSemana;
 
-   printf("Insira em qual dia em que estamos!(em números)");
+   printf("Insira em qual dia em que estamos!(em números): ");
    scanf("%d", &diaDaSemana);
 
-   if (diaDaSemana == 1){
-    printf("Domingo!");
-   }else if(diaDaSemana == 2){
-    printf("Segunda-Feira!");
-   }else if(diaDaSemana == 3){
-    printf("Terça-Feira!");
-   }else if(diaDaSemana == 4){
-    printf("Quarta-Feira!");
-   }else if(diaDaSemana == 5){
-    printf("Quinta-Feira!");
-   }else if(diaDaSemana == 6){
-    printf("Sexta-Feira");
-   }else if(diaDaSemana == 7){
-    printf("Sabado!");
-   }else{
-    printf("Valor Inválido");
+   switch(diaDaSemana){
+        case 1:
+            printf("Domingo!");
+            break;
+        case 2:
+            printf("Segunda-Feira!");
+            break;
+        case 3:
+            printf("Terça-Feira!");
+            break;
+        case 4:
+            printf("Quarta-Feira!");
+            break;
+        case 5:
+            printf("Quinta-Feira!");
+            break;
+        case 6:
+            printf("Sexta-Feira!");
+            break;
+        case 7:
+            printf("Sábado!");
+            break;
+        default:
+            printf("Número inválido!!");
+            break;
    }
 
     return 0;
