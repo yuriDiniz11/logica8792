@@ -7,32 +7,41 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   int opcao;
+   int mes;
 
-   printf("--- SISTEMA DE PEDÁGIO ---\n");
-   printf("1 - Moto\n");
-   printf("2 - Carro Passeio\n");
-   printf("3 - caminhão\n");
-   printf("4 - Ônibus\n");
-   scanf("%d", &opcao);
+        printf("Insira em qual mês estamos para saber a estação do ano! (em números de 1 a 12)\n");
+        scanf("%d", &mes);
 
-   switch (opcao)
-   {
-    case 1:
-        printf("Categoria: Moto | Tarifa: R$ 5,00\n");
-        break; 
-    case 2:
-        printf("Categoria: Carro Passeio | Tarifa: R$ 10,00\n");
-        break;
-    case 3:
-        printf("Categoria: Caminhão | Tarifa: R$ 25,00\n");
-        break;
-    case 4:
-        printf("Categoria: Ônibus | Tarifa R$ 30,00\n");
-        break;
-    default:
-        printf("Erro: Categoria não cadastrada no sistema.\n");
-        break;
+        switch(mes){
+	        case 12:
+            case 1:
+            case 2:
+                printf("Verão\n");
+                break;
+
+            case 3:
+            case 4:
+            case 5:
+                printf("Outono\n");
+                break;
+
+            case 6:
+            case 7:
+            case 8:
+                printf("Inverno\n");
+                break;
+
+            case 9:
+            case 10:
+            case 11:
+                printf("Verão\n");
+                break;
+
+            default:
+                printf("Digito inválido!");
+                break;
+					
+
    }
 
     return 0;
