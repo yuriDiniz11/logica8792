@@ -7,42 +7,19 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   int mes;
+   int n;
+   printf("Digite um número: ");
+   scanf("%d", &n);
 
-        printf("Insira em qual mês estamos para saber a estação do ano! (em números de 1 a 12)\n");
-        scanf("%d", &mes);
-
-        switch(mes){
-	        case 12:
-            case 1:
-            case 2:
-                printf("Verão\n");
-                break;
-
-            case 3:
-            case 4:
-            case 5:
-                printf("Outono\n");
-                break;
-
-            case 6:
-            case 7:
-            case 8:
-                printf("Inverno\n");
-                break;
-
-            case 9:
-            case 10:
-            case 11:
-                printf("Verão\n");
-                break;
-
-            default:
-                printf("Digito inválido!");
-                break;
-					
-
-   }
+    if(n % 3 == 0 && n % 5 == 0){
+        printf("Múltiplo de 3 e 5\n");
+    }else if(n % 3 == 0){
+        printf("Múltiplo de 3\n");
+    }else if(n % 5 == 0){
+        printf("Múltiplo de 5\n");
+    }else{
+        printf("Não é múltiplo de 3 nem de 5\n");
+    }  
 
     return 0;
 }
