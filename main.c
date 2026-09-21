@@ -7,15 +7,29 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   char nomes[5][20] = {"Ronaldo", "Ronaldinho", "Ronaldão", "Ronaldowsky", "Ronald"};
+   int numerosInteiros[5] = {1, 5, 10, 15, 20};
+   float numerosFloats[5] = {10.5, 20.8, 30.2, 40.9, 50.1};
+   char carros[3][20] = {"Ferrari", "Mercedez", "Mazda"};
 
-    printf("%s\n", nomes[0]);
-    printf("%s\n", nomes[1]);
-    printf("%s\n", nomes[2]);
-    printf("%s\n", nomes[3]);
-    printf("%s\n", nomes[4]);
+   printf("Mostraremos os números inteiros primeiro:\n");
 
-    printf("\nConvocados da seleção de futsal!!");
+   for(int i = 0; i < 5; i++){
+    printf("%d\n", numerosInteiros[i]);
+   }
+
+   printf("\nAgora mostraremos os números floats:\n");
+
+   for(int j = 0; j < 5; j++){
+    printf("%.2f\n", numerosFloats[j]);
+   }
+
+   printf("\nAgora mostraremos os veículos:\n");
+
+   for(int k = 0; k < 3; k++){
+    printf("%s\n", carros[k]);
+   }
+
+   
 
     return 0;
 }
