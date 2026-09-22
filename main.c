@@ -2,8 +2,8 @@
 #include<windows.h>
 
 void saudar(){
-    printf("Hello World!");
-    printf("\nOlá Mundo!")
+    printf("\nHello World!\n");
+    printf("\nOlá Mundo!");
 }
 
 int main(){
