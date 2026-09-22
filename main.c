@@ -7,9 +7,12 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   int numeros[] = {10, 20, 30};
+   int x = 10;
+   int *p = &x;
 
-   printf("%zu", sizeof(numeros));
+   printf("Valor de x: %d\n", x);
+   printf("Endereço de x: %p\n", &x);
+   printf("Valor via ponteiro: %d\n", *p);
 
     return 0;
 }
