@@ -17,7 +17,8 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    tabuada(7);
+    int ultimo = tabuada(7);
+    printf("Último valor da tabuada: %d\n", ultimo);
 
     return 0;
 }
