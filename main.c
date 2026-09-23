@@ -4,9 +4,9 @@
 
 void fibonacci(int termos){
     int a = 0, b = 1, c;
-    printf("Sequência de Fibonacci (%d termos): ", termos);
+    printf("Sequência de Fibonacci (%d termos): \n", termos);
     for(int i = 1; i <= termos; i++){
-        printf("%d", a);
+        printf("%d\n", a);
         c = a + b;
         a = b;
         b = c;
