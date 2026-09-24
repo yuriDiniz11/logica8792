@@ -2,15 +2,13 @@
 #include<windows.h>
 #include<math.h>
 
-void contarVogais(char palavras[]){
-    int contador = 0;
-    for(int i = 0; i <strlen(palavras); i++){
-        char c = palavras[i];
-        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'|| c == 'A' || c == 'E' || c == 'I'|| c == 'O' || c == 'U'){
-            contador++;
-        }
-    } //strlen calcula os caracteres de uma palavra.
-    printf("A palavra '%s' tem %d vogais.\n", palavras, contador);
+void maxMin(int v[], int tamanho){
+    int max = v[0], min = v[0];
+    for(int i = 1; i < tamanho; i++){
+        if(v[i] > max) max = v[i];
+        if(v[i] < min) min = v[i];
+    }
+    printf("Máximo: %d, Mínimo: %d\n", max, min);
 }
 
 int main(){
@@ -18,12 +16,10 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    char palavra[20];
+    int numeros[] = {4, 8, 2, 15, 6};
+    maxMin(numeros, 5);
 
-    printf("Digite uma palavra para saber as vogais! ");
-    scanf("%s", palavra);
-
-    contarVogais(palavra);
+    
 
     return 0;
 }
