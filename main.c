@@ -8,16 +8,13 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int numero, soma = 0;
-
-    printf("Digite número para somar (0 encerra): ");
-    scanf("%d", &numero);
-
-    while(numero != 0){
-        soma += numero;
-        scanf("%d", &numero);
+    int i = 1;
+    while(i <= 50){
+        if(i % 2 == 0){
+            printf("%d\n", i);
+        }
+        i++;
     }
-    printf("Soma total = %d\n", soma);
 
     return 0;
 }
