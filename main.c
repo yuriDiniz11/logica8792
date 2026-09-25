@@ -1,32 +1,31 @@
 #include<stdio.h>
 #include<windows.h>
 
+int ehPrimo(int n){
+
+    if(n < 2)return 0;
+
+    for(int i = 2; i < n; i++){
+        if(n % i == 0) return 0;
+    }
+    return 1;
+}
+
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n, primo = 1;
+    int numero;
 
     printf("Digite um número: ");
-    scanf("%d", &n);
+    scanf("%d", &numero);
 
-    if(n < 2){
-        primo = 0;
-    }else{
-        for(int i = 2; i <= n / 2; i++){
-            if(n % i == 0){ 
-                primo = 0;
-                break;
-            }
-        }
-    }
-    if(primo){
-        printf("%d é primo\n", n);
-    }else{
-        printf("%d não é primo\n", n);
-    }
+    if(ehPrimo(numero))
+        printf("%d é primo\n", numero);
+    else    
+        printf("%d não é primo\n", numero);
 
     return 0;
 }
