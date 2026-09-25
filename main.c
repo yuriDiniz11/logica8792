@@ -7,15 +7,18 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int tabuada;
+    int n;
+    float valor, soma = 0;
 
-    printf("Digite um n° para saber a tabuada: ");
-    scanf("%d", &tabuada);
+    printf("Quantos números deseja digitar: ");
+    scanf("%d", &n);
 
-    for(int i = 0; i <= 10; i++){
-        int resultado = i * tabuada;
-        printf("O resultado de %d x %d = %d\n", tabuada, i, resultado);
+    for(int i = 0; i < n; i++){
+        printf("Digite o número %d: ", i + 1);
+        scanf("%f", &valor);
+        soma += valor;
     }
+    printf("Média: %.2f\n", soma / n);
 
     return 0;
 }
