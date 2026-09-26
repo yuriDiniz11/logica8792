@@ -1,31 +1,23 @@
 #include<stdio.h>
 #include<windows.h>
 
-int ehPrimo(int n){
-
-    if(n < 2)return 0;
-
-    for(int i = 2; i < n; i++){
-        if(n % i == 0) return 0;
-    }
-    return 1;
-}
-
-
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int numero;
+    int n;
+    float nota, soma = 0;
 
-    printf("Digite um número: ");
-    scanf("%d", &numero);
+    printf("Quantos alunos tem a turma: ");
+    scanf("%d", &n);
+    for(int i = 0; i < n; i++){
+        printf("Digite a nota do aluno %d: \n", i + 1);
+        scanf("%f", &nota);
+        soma += nota;
+    }
 
-    if(ehPrimo(numero))
-        printf("%d é primo\n", numero);
-    else    
-        printf("%d não é primo\n", numero);
+    printf("Média da turma: %.2f\n", soma / n);
 
     return 0;
 }
