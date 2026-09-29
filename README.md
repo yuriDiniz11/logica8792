@@ -1,6 +1,6 @@
 # Lógica de Programação 
 
-Repositório com os exercícios de lógica de programação em C desenvolvidos em aula no curso Técnico em Desenvolvimento de Sistemas (SENAC-RS). A cada conteúdo novo, os códigos feitos com o professor são commitados aqui.
+Repositório com os exercícios de lógica de programação em C desenvolvidos em aula no curso Técnico em Desenvolvimento de Sistemas (SENAC-RS). A cada conteúdo novo, os códigos feitos são commitados aqui.
 
 ## Organização
 
