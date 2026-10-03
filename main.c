@@ -12,20 +12,23 @@ int main(){
     scanf("%d", &n);
 
     int v[n];
-    int pares = 0, impares = 0;
 
     for(int i = 0; i < n; i++){
         printf("Digite o valor %d: ", i + 1);
         scanf("%d", &v[i]);
-        if(v[i] % 2 == 0){
-            pares++;
-        }else{
-            impares++;
+    }
+    int ordenado = 1;
+    for(int i = 0; i < n - 1; i++){
+        if(v[i] > v[i + 1]){
+            ordenado = 0;
+            break;
         }
     }
-
-    printf("Pares: %d\n", pares);
-    printf("Impares %d\n", impares);
+    if(ordenado){
+        printf("O vetor está ordenado de forma crescente\n");
+    }else{
+        printf("O vetor NÃO está ordenado\n");
+    }
 
     return 0;
 }
