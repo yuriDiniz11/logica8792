@@ -21,9 +21,9 @@ int main(){
     scanf("%d", &pos);
 
     for(int i = pos; i < n - 1; i++){
-        v[i] = v[i + 1];
+        v[i] = v[i + 1]; //v[i] é a posição atual do vetor || v[i + 1] é para ele entender a posição de remoção
     }
-    n--;
+    n--; //quando terminar as voltas do for, esse n-- decrementa
     printf("Vetor após remoção: \n");
     for(int i = 0; i < n; i++){
         printf("%d", v[i]);
