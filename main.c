@@ -1,34 +1,16 @@
 #include<stdio.h>
 #include<windows.h>
 
+void msg(){
+    printf("Bon voyage!");
+}
+
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n, pos;
-
-    printf("Digite o tamanho do vetor: ");
-    scanf("%d", &n);
-
-    int v[n];
-
-    for(int i = 0; i < n; i++){
-        printf("Digite o valor %d: ", i + 1);
-        scanf("%d", &v[i]);
-    }
-    printf("Digite a posição a remover (0 a %d): ", n - 1);
-    scanf("%d", &pos);
-
-    for(int i = pos; i < n - 1; i++){
-        v[i] = v[i + 1]; //v[i] é a posição atual do vetor || v[i + 1] é para ele entender a posição de remoção
-    }
-    n--; //quando terminar as voltas do for, esse n-- decrementa
-    printf("Vetor após remoção: \n");
-    for(int i = 0; i < n; i++){
-        printf("%d", v[i]);
-    }
-    printf("\n");
-
+    msg(); 
+    
     return 0;
 }
