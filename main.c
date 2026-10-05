@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<windows.h>
 
-void msg(){
-    printf("Bon voyage!");
+char* saudacao(){
+    return "May the force be with you!";
 }
 
 int main(){
@@ -10,7 +10,7 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    msg(); 
-    
+    printf("%s\n", saudacao()); 
+
     return 0;
 }
