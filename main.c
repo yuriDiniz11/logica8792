@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<windows.h>
 
-char* saudacao(){
-    return "May the force be with you!";
+char* returnName(char nome[]){
+    return nome;
 }
 
 int main(){
@@ -10,7 +10,7 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("%s\n", saudacao()); 
+    printf("O nome é: %s", returnName("Kelly Slater"));
 
     return 0;
 }
