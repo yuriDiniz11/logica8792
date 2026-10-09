@@ -6,22 +6,17 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int numero;
-    int sucesso;
+    int n1, n2, n3, maior;
 
-    do{
-        printf("Digite um n° maior que 0: ");
-        sucesso = scanf("%d", &numero);
+    printf("Digite trÊs valores: ");
+    scanf("%d %d %d", &n1, &n2, &n3);
 
-        if(sucesso != 1){
-            printf("Entrada inválida! Digite apenas n° inteiros.\n");
-            while(getchar() != '\n');
-            numero = 0;
-        }
-    }while(numero <= 0);
+    maior = n1;
 
-    printf("Você digitou %d, que é válido!\n");
+    maior = (n2 > maior) ? n2 : maior;
+    maior = (n3 > maior) ? n3 : maior;
    
+    printf("O maior é %d.\n", maior);
 
     return 0;
 }
