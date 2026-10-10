@@ -6,17 +6,12 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n1, n2, n3, maior;
+    int i = 1;
 
-    printf("Digite trÊs valores: ");
-    scanf("%d %d %d", &n1, &n2, &n3);
-
-    maior = n1;
-
-    maior = (n2 > maior) ? n2 : maior;
-    maior = (n3 > maior) ? n3 : maior;
-   
-    printf("O maior é %d.\n", maior);
+    do{
+        printf("%d\n", i);
+        i++;
+    }while(i <= 5);
 
     return 0;
 }
