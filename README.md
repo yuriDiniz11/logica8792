@@ -11,5 +11,6 @@ Exercícios de aula, com um commit a cada exercício novo aprendido.
 
 ## Como compilar e executar:
 
-  - gcc main.c -o p  
-  - ./p 
+```bash
+  gcc main.c -o p  
+ ./p 
