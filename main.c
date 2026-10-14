@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<windows.h>
+#include<math.h>
 
 int main(){
 
@@ -8,27 +9,23 @@ int main(){
 
     int n;
 
-    printf("Digite o tamanho dos vetores: ");
+    printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
 
-    int a[n], b[n], soma [n];
+    float v[n], soma = 0, media, somaDesvios = 0;
 
-    printf("Digite os valores do vetor A: ");
     for(int i = 0; i < n; i++){
-        scanf("%d", &a[i]);
+        printf("Digite o valor %d: ", i + 1);
+        scanf("%f", &v[i]);
+        soma += v[i];
     }
-    printf("Digite os valores do vetor B: ");
+    media = soma / n;
     for(int i = 0; i < n; i++){
-        scanf("%d", &b[i]);
+        somaDesvios += (v[i] - media) * (v[i] - media);
     }
-    for(int i = 0; i < n; i++){
-        soma[i] = a[i] + b[i];
-    }
-    printf("Vetor soma:\n");
-    for(int i = 0; i < n; i++){
-        printf("%d\n", soma[i]);
-    }
-    printf("\n");
+    float desvioPadrao = sqrt(somaDesvios / n);
+    printf("Média: %.2f\n", media);
+    printf("Desvio padrão: %.2f\n", desvioPadrao);
 
     return 0;
 }
