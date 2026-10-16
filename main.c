@@ -21,7 +21,7 @@ int main(){
     printf("\n");
 
     printf("Escreva seu nome: ");
-    scanf("%s", &p1.nome);
+    fgets(p1.nome, sizeof(p1.nome), stdin);
 
     printf("Digite sua idade: ");
     scanf("%d", &p1.idade);
