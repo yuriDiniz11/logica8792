@@ -3,12 +3,6 @@
 #include<math.h>
 #include<string.h>
 
-struct Pessoa{
-    char nome[50];
-    int idade;
-    float altura;
-    float peso;
-};
 
 int main(){
 
@@ -17,33 +11,29 @@ int main(){
 
     int n;
 
-    printf("Quantas pessoas deseja cadastrar: ");
+    printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
 
-    getchar(); //Consome o '\n' deixado pelo scanf
-
-    struct Pessoa p1[n];
+    int v[n];
 
     for(int i = 0; i < n; i++){
-        printf("\nPessoa %d\n ", i + 1);
-        printf("Nome completo: ");
-        fgets(p1[i].nome, sizeof(p1[i].nome), stdin);
-
-        printf("Idade: ");
-        scanf("%d", &p1[i].idade);
-
-        printf("Altura: ");
-        scanf("%f", &p1[i].altura);
-
-        printf("Peso: ");
-        scanf("%f", p1[i].peso);
-
-        getchar();
+        printf("Digite o valor %d: ", i + 1);
+        scanf("%d", &v[i]);
     }
-    printf("\n--- Lista de pessoas---\n");
+    for(int i = 0; i < n - 1; i++){
+        for(int j = 0; j < n - i - 1; j++){
+            if(v[j] > v[j + 1]){
+                int temp = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = temp;
+            }
+        }
+    }
+    printf("Vetor ordenado: \n");
     for(int i = 0; i < n; i++){
-        printf("Nome %d: %s | Idade: %d | Altura: %.2f | Peso: %.2f", i + 1, p1[i].nome, p1[i].idade, p1[i].altura, p1[i].peso);
+        printf("%d", v[i]);
     }
+    printf("\n");
 
     return 0;
 }
