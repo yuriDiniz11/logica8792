@@ -9,16 +9,15 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n;
+    int soma = 1;
 
-    printf("Digite um n°: ");
-    scanf("%d", &n);
-
-    while(n >= 0){
-        printf("%d\n", n);
-        n--;
+    while(soma <= 100){
+        for(int i = 1; i <= 100; i++){
+            int result = i + soma;
+            printf("%d + %d = %d\n", i, soma, result);
+            soma++;
     }
-    
+}
 
     return 0;
 }
