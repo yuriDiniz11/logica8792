@@ -9,17 +9,11 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n, soma;
+    int n = 5;
 
-    printf("Digite N: ");
-    scanf("%d", &n);
-
-    for(int i = 1; i <= n; i++){
-        soma += i;
-        soma -= 1;
-        printf("\nO resultado %d + %d = %d", soma, i, soma + i);
+    for(int i = 1; i <= 5; i++){
+        printf("%d - Programar\n", i);
     }
-
     
 
     return 0;
