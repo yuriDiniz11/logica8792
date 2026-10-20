@@ -9,20 +9,20 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n, soma = 0;
+    int n, pares = 0;
 
     printf("Digite um n°: ");
     scanf("%d", &n);
 
     while (n != 0){   
         if(n % 2 == 0){
-            soma+= n;     
+            pares+= n;     
         }
         printf("Digite um n°: ");
         scanf("%d", &n);
 
     }
-    printf("Soma: %d\n", soma);
+    printf("Quantidade de n° pares: %d\n", pares);
     
 
     return 0;
