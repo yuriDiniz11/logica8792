@@ -14,10 +14,13 @@ int main(){
     printf("Digite um n°: ");
     scanf("%d", &n);
 
-    while (n != 0){        
-        soma += n;
+    while (n != 0){   
+        if(n % 2 == 0){
+            soma+= n;     
+        }
         printf("Digite um n°: ");
         scanf("%d", &n);
+
     }
     printf("Soma: %d\n", soma);
     
