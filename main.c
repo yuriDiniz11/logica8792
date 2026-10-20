@@ -9,17 +9,15 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int senha = 1234;
-    int tentativas;
+    int n;
+    
+    printf("Digite um valor para saber a tabuada: ");
+    scanf("%d", &n);
 
-    printf("Digite sua senha: ");
-    scanf("%d", &tentativas);
-
-    while(tentativas != senha){
-        printf("Senha errada! Digite a senha correta: ");
-        scanf("%d", &tentativas);
+    for(int i = 1; i <= 10; i++){
+        int resultado = n * i;
+        printf("%d x %d = %d\n", n, i, resultado);
     }
-    printf("Senha correta! Bem-vindo ao sistema!\n");    
 
     return 0;
 }
