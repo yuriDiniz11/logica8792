@@ -9,21 +9,17 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n, pares = 0;
+    int senha = 1234;
+    int tentativas;
 
-    printf("Digite um n°: ");
-    scanf("%d", &n);
+    printf("Digite sua senha: ");
+    scanf("%d", &tentativas);
 
-    while (n != 0){   
-        if(n % 2 == 0){
-            pares+= n;     
-        }
-        printf("Digite um n°: ");
-        scanf("%d", &n);
-
+    while(tentativas != senha){
+        printf("Senha errada! Digite a senha correta: ");
+        scanf("%d", &tentativas);
     }
-    printf("Quantidade de n° pares: %d\n", pares);
-    
+    printf("Senha correta! Bem-vindo ao sistema!\n");    
 
     return 0;
 }
