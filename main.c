@@ -10,13 +10,13 @@ int main(){
     SetConsoleOutputCP(65001);
 
     int n;
-    
-    printf("Digite um valor para saber a tabuada: ");
-    scanf("%d", &n);
 
-    for(int i = 1; i <= 10; i++){
-        printf("%d x %d = %d\n", n, i, n * i);
-    }
+    do{
+        printf("Digite um n° (não negativo): ");
+        scanf("%d", &n);
+    }while(n < 0);
+
+    printf("Você digitou: %d\n", n);
 
     return 0;
 }
