@@ -9,26 +9,32 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int opcao;
+    int num;
+    
+    printf("Digite um n°: ");
+    scanf("%d", &num);
 
-    do{
-        printf("\n--- MENU ---\n");
-        printf("1 - Dizer olá\n");
-        printf("2 - Dizer tchau\n");
-        printf("0 - Sair\n");
-        printf("Escolha: ");
-        scanf("%d", &opcao);
+    if(num > 3){
+        printf("Digite um n° de 0 a 3!");
+    }else{  
+        switch (num){
+        case 1:
+            printf("Você digitou o n° um!");   
+            break;
+        
+        case 2:
+            printf("Você digitou o n° dois!");
+            break;
 
-        if(opcao == 1){
-            printf("Olá\n");
-        }else if(opcao == 2){
-            printf("Tchau\n");
-        }else if(opcao != 0){
-            printf("Opção inválida!\n");
-        }
-    }while(opcao != 0);
+        case 3: 
+            printf("Você digitou n° três!");
+            break;
 
-    printf("Até mais\n");
+        default:
+            printf("Digite um n° menor que 4 e maior que 0!");
+            break;
+    }
+    }
 
     return 0;
 }
