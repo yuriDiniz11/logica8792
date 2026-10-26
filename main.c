@@ -10,27 +10,27 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    const int LANCAMENTOS = 10;
-    int dados[LANCAMENTOS];
-    int soma = 0;
-    int seis = 0;
+    int cartela[5] = {3, 8, 12, 15, 10};
+    int sorteado[21] = {0};
+    int acertos = 0, rodadas = 0, bola;
 
     srand(time(NULL));
 
-    for(int i = 0; i < LANCAMENTOS; i++){
-        dados[i] = rand() % 6 + 1;
-        soma += dados[i];
-        if(dados[i] == 6){
-            seis++;
+    while(acertos < 5){
+        do{
+            bola = rand() % 20 + 1;
+        }while(sorteado[bola]);
+        sorteado[bola] = 1;
+        rodadas++;
+        printf("Bola %d: %\n", rodadas, bola);
+
+        for(int i = 0; i < 5; i++){
+            if(cartela[i] == bola){
+                acertos++;
+                printf("Acertou o %d! (%d de 5)\n", bola, acertos);
+            }
         }
     }
-    printf("Resultados dos lançamentos:\n");
-
-    for(int i = 0; i < LANCAMENTOS; i++){
-        printf("Lançamento %d: %d\n", i + 1, dados[i]);
-    }
-    printf("\nSoma: %d\n", soma);
-    printf("Quantidade de vezes que saiu 6: %d\n", seis);
 
     return 0;
 }
