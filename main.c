@@ -10,27 +10,18 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int cartela[5] = {3, 8, 12, 15, 10};
-    int sorteado[21] = {0};
-    int acertos = 0, rodadas = 0, bola;
+    int m[2][2] = {
+        {1,2},
+        {3,4},
+    };
 
-    srand(time(NULL));
-
-    while(acertos < 5){
-        do{
-            bola = rand() % 20 + 1;
-        }while(sorteado[bola]);
-        sorteado[bola] = 1;
-        rodadas++;
-        printf("Bola %d: %\n", rodadas, bola);
-
-        for(int i = 0; i < 5; i++){
-            if(cartela[i] == bola){
-                acertos++;
-                printf("Acertou o %d! (%d de 5)\n", bola, acertos);
-            }
-        }
+    for(int i = 0; i < 2; i++){
+        for(int j = 0; j < 2; j++){
+            printf("%d ", m[i][j]);
+        }         
+        printf("\n");
     }
+    
 
     return 0;
 }
