@@ -5,13 +5,11 @@
 #include<stdlib.h>
 #include<time.h>
 
-void exibirMatriz(int m[2][2]){
-    for(int i = 0; i < 2; i++){
-        for(int j = 0; j < 2; j++){
-            printf("%d ", m[i][j]);
-        }
-        printf("\n");
-    }
+void saudacao(char nome[]){
+    printf("Olá , %s\n", nome);
+}
+int soma(int a, int b){
+    return a + b;
 }
 
 int main(){
@@ -19,11 +17,11 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int m[2][2] = {
-        {1, 2},
-        {3, 4}
-    };
-    exibirMatriz(m);    
+    saudacao("Ronaldinho");
+
+    int resultado = soma;
+    printf("%d", resultado);
+
 
     return 0;
 }
