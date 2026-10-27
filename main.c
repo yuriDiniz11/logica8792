@@ -5,11 +5,15 @@
 #include<stdlib.h>
 #include<time.h>
 
-void saudacao(char nome[]){
-    printf("Olá , %s\n", nome);
-}
-int soma(int a, int b){
-    return a + b;
+
+void soma1(){
+    int x, y, resultado;
+    printf("\nDigite um valor para x: ");
+    scanf("%d", &x);
+    printf("\nDigite um valor para y: ");
+    scanf("%d", &y);
+    resultado = x + y;
+    printf("\nA soma de %d + %d = %d", x, y, resultado);
 }
 
 int main(){
@@ -17,11 +21,9 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    saudacao("Ronaldinho");
+    soma1();
 
-    int resultado = soma;
-    printf("%d", resultado);
-
+    
 
     return 0;
 }
