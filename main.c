@@ -5,8 +5,8 @@
 #include<stdlib.h>
 #include<time.h>
 
-void linha(){
-    printf("-------------\n");
+void mostrarNumero(int numero){
+    printf("Número: %d\n", numero);
 }
 
 int main(){
@@ -14,9 +14,7 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    linha();
-    printf("What does the fox say...\n");
-    linha();
+    mostrarNumero(40);
 
     return 0;
 }
