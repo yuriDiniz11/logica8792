@@ -5,13 +5,11 @@
 #include<stdlib.h>
 #include<time.h>
 
-void contagem(int n){
-    if(n == 6){
-        printf("Fogo!\n");
-        return;
+int potencia(int base, int expoente){
+    if(expoente == 0){
+        return 1;
     }
-    printf("%d\n", n);
-    contagem(n + 1);
+    return base * potencia(base, expoente - 1);
 }
 
 int main(){
@@ -19,7 +17,7 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    contagem(1);
+    printf("Resultado: %d\n", potencia(2, 4));
 
     return 0;
 }
