@@ -5,13 +5,11 @@
 #include<stdlib.h>
 #include<time.h>
 
-void tabuada(int numero, int contador){
-    if(contador > 10){
-        return;
+int somarDigitos(int numero){
+    if(numero == 0){
+        return 0;
     }
-    printf("%d X %d = %d\n", numero, contador, numero * contador);
-
-    tabuada(numero, contador + 1);
+    return (numero % 10) + somarDigitos(numero / 10);
 }
 
 int main(){
@@ -19,7 +17,7 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    tabuada(7, 1);
+    printf("Soma: %d\n", somarDigitos(1234));
 
     return 0;
 }
