@@ -5,16 +5,32 @@
 #include<stdlib.h>
 #include<time.h>
 
-float areaRetangulo(float base, float altura){
-    return base * altura;
+//função variavel soma, total setada em 0;
+//ela tem que somar de forma repetida;
+//for - while
+//função com paramentro (int n) 
+
+int soma(int n){
+    int total = 0;
+    
+
+    for(int i = 1; i <= n; i++){
+        total += i;        
+    }
+    return total;
 }
 
 int main(){
 
     SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
+    SetConsoleOutputCP(65001);    
 
-    printf("Área: %.2f\n", areaRetangulo(5, 3.5));
+    int tot;
+
+    printf("Digite um n°: ");
+    scanf("%d", &tot);
+
+    printf("Soma de 1 a n: %d\n", soma(tot));
 
     return 0;
 }
