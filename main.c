@@ -5,16 +5,12 @@
 #include<stdlib.h>
 #include<time.h>
 
-int maiorDeTres(int a, int b, int c){
-    int maior = a;
-
-    if(b > maior){
-        maior = b;
+int somaPares(int n){
+    int soma = 0;
+    for(int i = 2; i <= n; i += 2){
+        soma += i;
     }
-    if(c > maior){
-        maior = c;
-    }
-    return maior;
+    return soma;
 }
 
 int main(){
@@ -22,12 +18,7 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);    
 
-    int a1, b1, c1;
-
-    printf("Digite três valores: ");
-    scanf("%d %d %d", &a1, &b1, &c1);
-
-    printf("Maior: %d\n", maiorDeTres(a1, b1, c1));
+    printf("Soma dos pares até 10: %d\n", somaPares(10));
     
     return 0;
 }
