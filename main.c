@@ -5,13 +5,16 @@
 #include<stdlib.h>
 #include<time.h>
 
-int somaDigitos(int n){
-    int soma = 0;
-    while(n != 0){
-        soma += n % 10; // soma = 0 + n % 10
-        n /= 10;
+int maiorDeTres(int a, int b, int c){
+    int maior = a;
+
+    if(b > maior){
+        maior = b;
     }
-    return soma;
+    if(c > maior){
+        maior = c;
+    }
+    return maior;
 }
 
 int main(){
@@ -19,12 +22,12 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);    
 
-    int inteiro;
+    int a1, b1, c1;
 
-    printf("Digite um n°: ");
-    scanf("%d", &inteiro);
+    printf("Digite três valores: ");
+    scanf("%d %d %d", &a1, &b1, &c1);
 
-    printf("Soma dos digitos é: %d\n", somaDigitos(inteiro));
-
+    printf("Maior: %d\n", maiorDeTres(a1, b1, c1));
+    
     return 0;
 }
