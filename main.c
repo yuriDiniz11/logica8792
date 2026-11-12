@@ -10,17 +10,18 @@ int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);    
+    //quantidade de n° que terminam em 0 OU 5; de 1 a 100
+    //int total
 
-    //de 0 até 200 valores que terminam em 3
-    int n = 0;
+    int total = 0;
 
-    for(int i = 1; i <= 200; i++){
-        if(i % 10 == 3){
+    for(int i = 1; i <= 100; i++){
+        if(i % 10 == 0 || i % 10 == 5){
             printf("%d\n", i);
-            n++;
+            total++;
         }
     }
-    printf("\n%d", n);
+    printf("N°: %d\n", total);
 
     return 0;
 }
