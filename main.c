@@ -11,14 +11,16 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);    
 
-    //for e if
-    //sem declarar i, int ano = 2000 ate 2030
+    //de 0 até 200 valores que terminam em 3
+    int n = 0;
 
-    for(int ano = 2000; ano <= 2030; ano++){
-        if(ano % 100 != 0 && ano % 4 == 0){
-            printf("%d\n", ano);
+    for(int i = 1; i <= 200; i++){
+        if(i % 10 == 3){
+            printf("%d\n", i);
+            n++;
         }
     }
+    printf("\n%d", n);
 
     return 0;
 }
