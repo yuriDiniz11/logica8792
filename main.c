@@ -10,18 +10,22 @@ int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);    
-    //quantidade de n° que terminam em 0 OU 5; de 1 a 100
-    //int total
+    //soma dos digitos com final 10 
+    //dezena i / 10
+    //unidade i % 10
 
-    int total = 0;
+    int soma = 0;    
 
-    for(int i = 1; i <= 100; i++){
-        if(i % 10 == 0 || i % 10 == 5){
+    for(int i = 10; i <= 99; i++){
+        int dezena = i / 10;
+        int unidade = i % 10;
+
+        if(dezena + unidade == 10){
             printf("%d\n", i);
-            total++;
+            soma++;
         }
     }
-    printf("N°: %d\n", total);
+    printf("N°: %d\n", soma);
 
     return 0;
 }
