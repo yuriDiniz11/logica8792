@@ -11,17 +11,14 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);    
 
-    int soma = 0;
+    //for e if
+    //sem declarar i, int ano = 2000 ate 2030
 
-    //pegar n° de 1 a 50
-
-    for(int i = 1; i <= 50; i++){
-        if(i % 2 == 1){
-            printf("%d\n", i);
-            soma += i;
+    for(int ano = 2000; ano <= 2030; ano++){
+        if(ano % 100 != 0 && ano % 4 == 0){
+            printf("%d\n", ano);
         }
     }
-    printf("%d\n", soma);
 
     return 0;
 }
